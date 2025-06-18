@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fan Engagement Idea Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-primary text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1 class="display-5 fw-bold">Fan Engagement Idea Generator</h1>
+                    <p class="lead">Transform your fan experience with tailored engagement strategies</p>
+                </div>
+                <div class="col-md-4 text-end">
+                    <button id="saved-ideas-btn" class="btn btn-outline-light">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-heart me-1" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 4.41c1.387-1.425 4.854 1.07 0 4.277C3.146 5.48 6.613 2.986 8 4.412z"/>
+                            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+                        </svg>
+                        Saved Ideas
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <div class="row g-4">
+            <!-- Input Form Section -->
+            <div class="col-lg-4">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-light">
+                        <h2 class="h5 mb-0">Tell Us About Your Needs</h2>
+                    </div>
+                    <div class="card-body">
+                        <form id="idea-generator-form">
+                            <div class="mb-3">
+                                <label for="product-type" class="form-label">Product/Service Type</label>
+                                <select class="form-select" id="product-type" required>
+                                    <option value="" selected disabled>Select your category</option>
+                                    <option value="sports-team">Sports Team</option>
+                                    <option value="esports">Esports Organization</option>
+                                    <option value="entertainment">Entertainment Brand</option>
+                                    <option value="lifestyle">Lifestyle Brand</option>
+                                    <option value="retail">Retail Business</option>
+                                    <option value="restaurant">Restaurant/Food Service</option>
+                                    <option value="nonprofit">Nonprofit Organization</option>
+                                    <option value="education">Educational Institution</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Target Audience Age Range</label>
+                                <div class="row g-2">
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="under-18" id="age-under-18">
+                                            <label class="form-check-label" for="age-under-18">Under 18</label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="18-24" id="age-18-24">
+                                            <label class="form-check-label" for="age-18-24">18-24</label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="25-34" id="age-25-34">
+                                            <label class="form-check-label" for="age-25-34">25-34</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row g-2 mt-1">
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="35-44" id="age-35-44">
+                                            <label class="form-check-label" for="age-35-44">35-44</label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="45-54" id="age-45-54">
+                                            <label class="form-check-label" for="age-45-54">45-54</label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="55-plus" id="age-55-plus">
+                                            <label class="form-check-label" for="age-55-plus">55+</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="budget-range" class="form-label">Budget Range</label>
+                                <select class="form-select" id="budget-range" required>
+                                    <option value="" selected disabled>Select budget level</option>
+                                    <option value="low">Low Budget (Under $1,000)</option>
+                                    <option value="medium">Medium Budget ($1,000 - $10,000)</option>
+                                    <option value="high">High Budget ($10,000+)</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="goal-select" class="form-label">Primary Goal</label>
+                                <select class="form-select" id="goal-select" required>
+                                    <option value="" selected disabled>Select your main goal</option>
+                                    <option value="brand-awareness">Increase Brand Awareness</option>
+                                    <option value="community-building">Community Building</option>
+                                    <option value="revenue">Generate Revenue</option>
+                                    <option value="loyalty">Increase Fan Loyalty</option>
+                                    <option value="engagement">Boost Online Engagement</option>
+                                    <option value="data-collection">Collect Fan Data</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Engagement Type Preferences</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="digital" id="type-digital" checked>
+                                    <label class="form-check-label" for="type-digital">Digital/Online</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="inperson" id="type-inperson" checked>
+                                    <label class="form-check-label" for="type-inperson">In-Person Events</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="merchandise" id="type-merchandise" checked>
+                                    <label class="form-check-label" for="type-merchandise">Merchandise/Physical Products</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="experiential" id="type-experiential" checked>
+                                    <label class="form-check-label" for="type-experiential">Experiential/Interactive</label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-100">Generate Ideas</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div class="col-lg-8">
+                <div id="results-container" class="d-none">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2 class="h3 mb-0">Fan Engagement Ideas</h2>
+                        <div>
+                            <button id="download-pdf" class="btn btn-outline-primary btn-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download me-1" viewBox="0 0 16 16">
+                                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                                    <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                                </svg>
+                                Save as PDF
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="ideas-container" class="row g-3"></div>
+                </div>
+
+                <div id="initial-message" class="text-center py-5">
+                    <img src="img/ideation.svg" alt="Ideation Illustration" class="img-fluid mb-4" style="max-width: 300px;">
+                    <h2 class="h3 mb-3">Ready to Boost Fan Engagement?</h2>
+                    <p class="lead text-muted">Fill out the form to discover customized engagement ideas for your audience.</p>
+                </div>
+
+                <div id="loading-indicator" class="text-center py-5 d-none">
+                    <div class="spinner-border text-primary mb-3" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <p class="lead">Generating your ideas...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Idea Card Template -->
+    <template id="idea-card-template">
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm idea-card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <span class="badge rounded-pill category-badge"></span>
+                    <button class="btn btn-sm btn-outline-secondary save-idea-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-plus" viewBox="0 0 16 16">
+                            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+                            <path d="M8 4a.5.5 0 0 1 .5.5V6H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V7H6a.5.5 0 0 1 0-1h1.5V4.5A.5.5 0 0 1 8 4z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="card-body">
+                    <h3 class="h5 card-title idea-title"></h3>
+                    <p class="card-text idea-description"></p>
+                    <div class="mt-3">
+                        <h6 class="fw-bold">Implementation Tips:</h6>
+                        <ul class="implementation-tips"></ul>
+                    </div>
+                </div>
+                <div class="card-footer bg-white">
+                    <div class="d-flex justify-content-between">
+                        <small class="text-muted budget-level"></small>
+                        <small class="text-muted difficulty-level"></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Saved Ideas Modal -->
+    <div class="modal fade" id="savedIdeasModal" tabindex="-1" aria-labelledby="savedIdeasModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="savedIdeasModalLabel">Your Saved Ideas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="saved-ideas-container" class="row g-3">
+                        <!-- Saved ideas will be displayed here -->
+                    </div>
+                    <div id="no-saved-ideas" class="text-center py-4">
+                        <p class="text-muted">You haven't saved any ideas yet.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger" id="clear-saved-ideas">Clear All</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0 text-muted">© 2025 Fan Engagement Idea Generator | <a href="https://github.com/dxaginfo/fan-engagement-app-2025" target="_blank" class="text-decoration-none">GitHub Repository</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
