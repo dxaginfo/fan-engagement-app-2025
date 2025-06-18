@@ -1,39 +1,90 @@
 # Fan Engagement Idea Generator
 
-A web application that helps sports teams and brands generate fan engagement ideas based on specific inputs such as product/service type, target audience, and budget constraints.
+A web application that helps sports teams and brands generate tailored fan engagement ideas based on specific criteria such as product/service type, target audience demographics, budget constraints, and goals.
 
-## Project Overview
+## Features
 
-The Fan Engagement Idea Generator is designed to serve as a brainstorming tool for marketing teams, event planners, and community managers who are looking to enhance fan engagement beyond their core product or service. The application draws from a database of proven engagement strategies and generates tailored suggestions based on user inputs.
+- **Customized Idea Generation:** Form-based interface for specifying engagement criteria
+- **Filtered Results:** Ideas filtered to match your specific needs and constraints
+- **Implementation Tips:** Practical guidance for implementing each idea
+- **Local Storage:** Save your favorite ideas for future reference
+- **Responsive Design:** Works on desktop and mobile devices
 
-## Key Features
+## Live Demo
 
-- **Customized Idea Generation**: Input your brand type, target audience demographics, and budget range to receive relevant suggestions
-- **Categorized Results**: Ideas are sorted into categories such as AR/VR experiences, social media contests, community events, etc.
-- **Implementation Tips**: Each idea comes with basic implementation guidance and estimated resource requirements
-- **Idea Saving**: Save and export your favorite ideas for later reference
-- **Inspiration Gallery**: Browse examples of successful fan engagement campaigns from various industries
+[View the live demo](https://dxaginfo.github.io/fan-engagement-app-2025/) (coming soon)
 
-## Technical Approach
+## Screenshots
 
-This web application is built using a lightweight architecture:
+![Fan Engagement Idea Generator Screenshot](docs/screenshot.png) (placeholder)
 
-- **Frontend**: HTML, CSS, JavaScript with minimal dependencies
-- **Database**: JSON-based collection of engagement ideas, stored locally or in a simple cloud storage solution
-- **Filtering Logic**: Client-side filtering and idea generation based on user inputs
-- **Responsive Design**: Mobile-friendly interface for on-the-go ideation
+## Technologies Used
 
-## Target Users
+- HTML5
+- CSS3 with custom animations
+- JavaScript (ES6+)
+- Bootstrap 5
+- Local Storage API
+- SVG Graphics
 
-- Sports team marketing departments
-- Event organizers and promoters
-- Brand managers looking to build community
-- Community managers seeking fresh engagement tactics
+## Getting Started
 
-## Development Status
+### Prerequisites
 
-This project is currently in active development. The initial version focuses on building a comprehensive database of engagement ideas and implementing the core filtering functionality.
+- A modern web browser (Chrome, Firefox, Safari, Edge)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/dxaginfo/fan-engagement-app-2025.git
+   ```
+
+2. Open `index.html` in your browser, or use a local development server:
+   ```bash
+   # Using Python
+   python -m http.server 8000
+   
+   # Using Node.js with http-server
+   npx http-server
+   ```
+
+## Usage
+
+1. Select your product/service type from the dropdown
+2. Specify target audience age ranges
+3. Choose your budget level
+4. Select your primary goal
+5. Check preferred engagement types
+6. Click "Generate Ideas" to receive tailored engagement suggestions
+7. Save your favorite ideas using the bookmark icon
+8. Access saved ideas from the "Saved Ideas" button
+
+## Documentation
+
+Additional documentation is available in the `docs` folder:
+
+- [Architecture Overview](docs/architecture.md)
+- [Setup Guide](docs/setup.md)
+
+## Extending the Application
+
+### Adding New Engagement Ideas
+
+To add more engagement ideas to the database, edit the `js/data.js` file and add new objects to the `engagementIdeas` array following the existing format.
+
+### Customizing Categories
+
+To modify or add categories, update:
+1. The category values in `js/data.js`
+2. The category display mappings in `js/app.js` (getCategoryDisplayName function)
+3. The category badge styles in `css/styles.css`
 
 ## License
 
-MIT License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- Bootstrap team for the responsive UI framework
+- The open-source community for inspiration and resources
