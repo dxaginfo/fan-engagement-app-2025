@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400px" height="300px" viewBox="0 0 400 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Ideation Illustration</title>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient">
+            <stop stop-color="#4361ee" offset="0%"></stop>
+            <stop stop-color="#3a0ca3" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g stroke="none" fill="none">
+        <!-- Background Circle -->
+        <circle cx="200" cy="150" r="120" fill="#f1f5f9" />
+        
+        <!-- Lightbulb -->
+        <g transform="translate(155, 70)">
+            <path d="M45,0 C62.6731,0 77,14.3269 77,32 C77,42.5357 71.5179,51.8714 63.0536,57.1143 C59.1071,59.7071 56,65.2214 56,70 L56,75 C56,78.3137 53.3137,81 50,81 L40,81 C36.6863,81 34,78.3137 34,75 L34,70 C34,65.2214 30.8929,59.7071 26.9464,57.1143 C18.4821,51.8714 13,42.5357 13,32 C13,14.3269 27.3269,0 45,0 Z" fill="url(#linearGradient)"></path>
+            <rect fill="#F7B32B" x="38" y="85" width="14" height="10" rx="2"></rect>
+            <path d="M40,95 L50,95 L47,105 L43,105 L40,95 Z" fill="#F7B32B"></path>
+            <path d="M56,65 L56,75 C56,78.3137 53.3137,81 50,81 L40,81 C36.6863,81 34,78.3137 34,75 L34,65 L56,65 Z" fill="#FFDC5D"></path>
+        </g>
+        
+        <!-- Idea Icons -->
+        <g transform="translate(100, 90)">
+            <circle cx="15" cy="15" r="15" fill="#4cc9f0" opacity="0.7" />
+            <text x="15" y="20" font-family="Arial" font-size="16" fill="#fff" text-anchor="middle">💡</text>
+        </g>
+        
+        <g transform="translate(280, 90)">
+            <circle cx="15" cy="15" r="15" fill="#f72585" opacity="0.7" />
+            <text x="15" y="20" font-family="Arial" font-size="16" fill="#fff" text-anchor="middle">🎯</text>
+        </g>
+        
+        <g transform="translate(130, 200)">
+            <circle cx="15" cy="15" r="15" fill="#7209b7" opacity="0.7" />
+            <text x="15" y="20" font-family="Arial" font-size="16" fill="#fff" text-anchor="middle">🏆</text>
+        </g>
+        
+        <g transform="translate(250, 200)">
+            <circle cx="15" cy="15" r="15" fill="#38b000" opacity="0.7" />
+            <text x="15" y="20" font-family="Arial" font-size="16" fill="#fff" text-anchor="middle">🔄</text>
+        </g>
+        
+        <!-- Connection Lines -->
+        <path d="M160,110 L190,150" stroke="#4361ee" stroke-width="2" opacity="0.5" />
+        <path d="M240,150 L270,110" stroke="#4361ee" stroke-width="2" opacity="0.5" />
+        <path d="M190,180 L160,200" stroke="#4361ee" stroke-width="2" opacity="0.5" />
+        <path d="M240,180 L270,200" stroke="#4361ee" stroke-width="2" opacity="0.5" />
+    </g>
+</svg>
