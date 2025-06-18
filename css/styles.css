@@ -1,0 +1,195 @@
+/* Base Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
+}
+
+/* Card Styles */
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border: none;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    border-bottom: none;
+    background-color: #f8f9fa;
+    padding: 1rem;
+}
+
+/* Idea Card Styles */
+.idea-card .card-header {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.idea-title {
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.category-badge {
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.35em 0.65em;
+}
+
+.badge.digital {
+    background-color: #4cc9f0;
+    color: #002855;
+}
+
+.badge.inperson {
+    background-color: #4361ee;
+    color: white;
+}
+
+.badge.merchandise {
+    background-color: #f72585;
+    color: white;
+}
+
+.badge.experiential {
+    background-color: #7209b7;
+    color: white;
+}
+
+.badge.social {
+    background-color: #fb8500;
+    color: white;
+}
+
+.badge.community {
+    background-color: #38b000;
+    color: white;
+}
+
+.implementation-tips {
+    padding-left: 1.25rem;
+    margin-bottom: 0;
+}
+
+.implementation-tips li {
+    margin-bottom: 0.5rem;
+}
+
+.implementation-tips li:last-child {
+    margin-bottom: 0;
+}
+
+/* Form Styles */
+.form-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.form-select,
+.form-control {
+    border-radius: 0.5rem;
+}
+
+.form-check-input:checked {
+    background-color: #4361ee;
+    border-color: #4361ee;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #4361ee;
+    border-color: #4361ee;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background-color: #3a0ca3;
+    border-color: #3a0ca3;
+}
+
+.btn-outline-primary {
+    color: #4361ee;
+    border-color: #4361ee;
+}
+
+.btn-outline-primary:hover {
+    background-color: #4361ee;
+    border-color: #4361ee;
+}
+
+.save-idea-btn {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.save-idea-btn.saved {
+    background-color: #4361ee;
+    border-color: #4361ee;
+    color: white;
+}
+
+.save-idea-btn.saved svg {
+    fill: white;
+}
+
+/* Loading Indicator */
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 1rem;
+    }
+    
+    .display-5 {
+        font-size: 2rem;
+    }
+    
+    .lead {
+        font-size: 1rem;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.idea-card {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Stagger the animations */
+.idea-card:nth-child(1) { animation-delay: 0.1s; }
+.idea-card:nth-child(2) { animation-delay: 0.2s; }
+.idea-card:nth-child(3) { animation-delay: 0.3s; }
+.idea-card:nth-child(4) { animation-delay: 0.4s; }
+.idea-card:nth-child(5) { animation-delay: 0.5s; }
+.idea-card:nth-child(6) { animation-delay: 0.6s; }
